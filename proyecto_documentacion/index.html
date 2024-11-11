@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTIÓN INVENTARIOS EGF-BQP</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>GESTIÓN INVENTARIOS EGF-BQP</h1>
+    </header>
+
+    <main>
+        <div class="botones">
+            <button id="btn-inventario">Inventario</button>
+            <button id="btn-graficos">Gráficos</button>
+        </div>
+
+        <div id="seccion-inventario" class="seccion">
+            <div class="tabla_inventario">
+                <h2>Inventario</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Producto</th>
+                            <th>Cantidad</th>
+                            <th>Precio Unitario</th>
+                            <th>Total</th>
+                        </tr>
+                    </thead>
+                    <tbody id="inventario-tbody">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="controles-inventario">
+                <button onclick="mostrarFormularioAgregar()">Agregar Producto</button>
+                <button onclick="quitarProducto()">Quitar Producto</button>
+            </div>
+        </div>
+
+        <div id="seccion-graficos" class="seccion">
+            <h2>Gráficos</h2>
+            <div id="datos">
+                <input type="text" id="titulo" placeholder="Título del gráfico">
+                <select id="tipo">
+                    <option value="circular">Circular</option>
+                    <option value="barras">Barras</option>
+                </select>
+            </div>
+            <div class="controles-graficos">
+                <button onclick="cargarGrafico()">Generar Gráfico</button>
+            </div>
+            <div id="piechart"></div>
+        </div>
+    </main>
+</body>
+</html>
